@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography } from '@mui/material';
+import { Grid, Link, Stack, Typography } from '@mui/material';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from "@mui/icons-material/Language";
@@ -8,32 +8,53 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export const CardLocation = ({ userState}) => {
 
   const { 
+    login: username,
     blog,
-    login,
     location,
     twitter_username: twitter,
-    url
+    html_url: github_profile
   } = userState;
 
   return (
-    <Grid container>
+    <Grid 
+      container
+      spacing={3}
+      marginTop='20px'
+    >
       <Grid item xs={6}>
-        <Stack>
+        <Stack direction='row' spacing={1}>
           <LocationOnIcon />
-          <Typography>{location}</Typography>
+          <Typography>{ location ? location : 'Location  unknown' }</Typography>
         </Stack>
       </Grid>
+
       <Grid item xs={6}>
-        <Stack>
-          <BusinessIcon />
+        <Stack direction='row' spacing={1}>
+          <GitHubIcon />
+          <Link
+            href={ github_profile }
+            target='_blank'
+            rel="noopener noreferrer"
+            underline="hover"
+          >
+            <Typography>GitHub {username}</Typography>
+          </Link>
         </Stack>
       </Grid>
+
       {
         blog && (
           <Grid item xs={6}>
-            <Stack>
+            <Stack direction='row' spacing={1}>
               <LanguageIcon />
-              <Typography>{ blog }</Typography>
+              <Link
+                href={blog}
+                target='_blank'
+                rel="noopener noreferrer"
+                underline="hover"
+              >
+                <Typography>{blog}</Typography>
+              </Link>
             </Stack>
           </Grid>
         )
@@ -41,19 +62,20 @@ export const CardLocation = ({ userState}) => {
       {
         twitter && (
           <Grid item xs={6}>
-            <Stack>
+            <Stack direction='row' spacing={1}>
               <TwitterIcon />
-              <Typography>@{ twitter }</Typography>
+              <Link
+                href={`https://twitter.com/${twitter}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                underline="hover"
+              >
+                <Typography>@{twitter}</Typography>
+              </Link>
             </Stack>
           </Grid>
         ) 
       }
-      <Grid item xs={6}>
-        <Stack>
-          <GitHubIcon />
-          <Typography>{ url }</Typography>
-        </Stack>
-      </Grid>
     </Grid>
     
   )

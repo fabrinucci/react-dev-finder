@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Container } from '@mui/material';
-import { Searcher } from '../components/Searcher';
+import { Searcher } from '../components';
 import { getGitHubUser } from '../services/users';
 import { UserCard } from '../containers/UserCard';
 
@@ -29,10 +29,9 @@ export const MainPage = () => {
 
   return (
     <Container sx={{
-      backgroundColor: 'papayawhip',
+      backgroundColor: '#fefcbf',
       marginTop: '50px',
-      borderRadius: '8px',
-      height: '300px',
+      borderRadius: '10px',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

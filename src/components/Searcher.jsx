@@ -17,6 +17,7 @@ export const Searcher = (props) => {
 
   return (
     <Stack direction='row' sx={{
+      marginTop: '30px',
       width: '80%'
     }}>
       <TextField 

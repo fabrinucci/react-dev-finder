@@ -7,14 +7,18 @@ export const CardDescription = ({ userState }) => {
 
   return (
     <>
-      <Stack>
-        { bio !== null 
-          ? <Typography variant='body2'>Description: {bio}</Typography>
-          : <Typography variant='body2'>Description: This user has not a description, what a boring man</Typography>
-        }
+      <Stack spacing={2}>
+        <Typography marginBottom={2}>
+          {
+            bio || 'This user does not have a description' 
+          }
+        </Typography>    
       </Stack>
-      {/* <CardStadistics userState={userState} /> */}
-      <CardLocation userState={userState} />
+
+      <Stack>
+        <CardStadistics userState={userState} />
+        <CardLocation userState={userState} />
+      </Stack>
     </>
   )
 }
