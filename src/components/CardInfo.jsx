@@ -11,16 +11,38 @@ export const CardInfo = ({ userState }) => {
 
   return (
     <CardContent>
-      <Typography gutterBottom variant="h4" component="div">{name}</Typography>
-      <Stack spacing={1}>
-        <Stack direction='row' spacing={1} alignItems='center'>
-          <Typography variant='h6'>Username:</Typography>
-          <Typography variant='body1'>{username}</Typography>
-        </Stack>
-        <Stack direction='row' spacing={1} alignItems='center'>
-          <Typography variant='h6'>Creation Date:</Typography>
-          <Typography variant='body1'>{created_at}</Typography>
-        </Stack>
+      <Typography gutterBottom 
+        component='div'
+        variant= 'h4'
+        sx={{
+          textAlign: {
+            xs: 'center',
+            sm: 'left'
+          }
+        }}
+      >
+        {name}
+      </Typography>
+      <Stack 
+        justifyContent='space-between' 
+        sx={{
+          flexDirection: {
+            xs: 'column',
+            sm: 'row'
+          },
+          textAlign: {
+            xs: 'center',
+            sm: 'left'
+          },
+        }}
+      >
+        <Typography variant='body2'>@{username}</Typography>
+        <Typography variant='body2' sx={{
+          marginTop: {
+            xs: '10px',
+            sm: 0
+          }
+        }}>{created_at}</Typography>
       </Stack>
   </CardContent>
   )

@@ -20,15 +20,24 @@ export const CardLocation = ({ userState}) => {
       container
       spacing={3}
       marginTop='20px'
+      sx={{
+        flexDirection: {
+          xs: 'column',
+          sm: 'row'
+        },
+        alignItems: {
+          xs: 'center'
+        }
+      }}
     >
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <Stack direction='row' spacing={1}>
           <LocationOnIcon />
           <Typography>{ location ? location : 'Location  unknown' }</Typography>
         </Stack>
       </Grid>
 
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         <Stack direction='row' spacing={1}>
           <GitHubIcon />
           <Link
@@ -44,7 +53,7 @@ export const CardLocation = ({ userState}) => {
 
       {
         blog && (
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Stack direction='row' spacing={1}>
               <LanguageIcon />
               <Link
@@ -61,7 +70,7 @@ export const CardLocation = ({ userState}) => {
       }
       {
         twitter && (
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Stack direction='row' spacing={1}>
               <TwitterIcon />
               <Link

@@ -39,11 +39,10 @@ export const MainPage = () => {
       alignItems: 'center',
       justifyContent: 'center'
     }}>
-        <>
-          <Searcher setInputUser={setInputUser}/>
-          <UserCard userState={userState}/>
-        </>
-
+      <>
+        <Searcher setInputUser={setInputUser}/>
+        <UserCard userState={userState}/>
+      </>
     </Container>
   )
 }

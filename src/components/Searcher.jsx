@@ -18,7 +18,10 @@ export const Searcher = (props) => {
   return (
     <Stack direction='row' sx={{
       marginTop: '30px',
-      width: '80%'
+      width: {
+        xs: '100%',
+        sm: '80%'
+      }
     }}>
       <TextField 
         value={ inputValue }
@@ -30,7 +33,8 @@ export const Searcher = (props) => {
         size='small'
         sx={{
           width: '90%'
-      }}/>
+        }}
+      />
       <IconButton 
         onClick={ handleSubmit }
         size='small' 
@@ -38,6 +42,8 @@ export const Searcher = (props) => {
       >
         <SearchIcon />
       </IconButton>
+
     </Stack>
+    
   )
 }

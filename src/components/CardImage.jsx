@@ -11,7 +11,12 @@ export const CardImage = ({ userState }) => {
   return (
     <CardMedia 
       sx={{
-        borderRadius: '50%'
+        borderRadius: '50%',
+        maxWidth: {
+          xs: '225px',
+          sm: 'auto'
+        },
+        margin: '0 auto'
       }}
       image={avatar_url}
       alt={`User ${name}`}
