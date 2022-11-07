@@ -9,17 +9,19 @@ export const MainPage = () => {
 
   const [inputUser, setInputUser] = useState('octocat');
   const [userState, setUserState] = useState(inputUser);
-  const [notFound, setNotFound] = useState(false);
 
   const getDataUser = async (user) => {
-    try {
-      const userResponse = await getGitHubUser(user);
+    const userResponse = await getGitHubUser(user);
+
+    if( userState === 'octocat' ) {
+      localStorage.setItem('octocat', JSON.stringify(userResponse));
+    }
+
+    if(userResponse.message === 'Not Found') {
+      const octocat = JSON.parse(localStorage.getItem('octocat'));
+      setUserState(octocat)
+    } else {
       setUserState(userResponse)
-      console.log(userResponse);
-      
-    } catch (error) {
-      console.log(error);
-      setNotFound(true);
     }
   }
   
@@ -37,16 +39,10 @@ export const MainPage = () => {
       alignItems: 'center',
       justifyContent: 'center'
     }}>
-      {
-        notFound 
-        ? <>
-            <h2>No se encuentra el usuario</h2>
-          </>
-        : <>
-            <Searcher setInputUser={setInputUser}/>
-            <UserCard userState={userState}/>
-          </>
-      }
+        <>
+          <Searcher setInputUser={setInputUser}/>
+          <UserCard userState={userState}/>
+        </>
 
     </Container>
   )
