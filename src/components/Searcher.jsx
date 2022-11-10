@@ -11,39 +11,41 @@ export const Searcher = (props) => {
     setInputValue(e.target.value);
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setInputUser(inputValue);
+    setInputValue('');
   }
 
   return (
-    <Stack direction='row' sx={{
-      marginTop: '30px',
-      width: {
-        xs: '100%',
-        sm: '80%'
-      }
+    <form onSubmit={ handleSubmit } style={{
+      width: '80%'
     }}>
-      <TextField 
-        value={ inputValue }
-        onChange={ onInputChange }
-        id="outlined-basic" 
-        label="GitHub user" 
-        variant="outlined"
-        placeholder='Octocat'
-        size='small'
-        sx={{
-          width: '90%'
-        }}
-      />
-      <IconButton 
-        onClick={ handleSubmit }
-        size='small' 
-        sx={{left: '-45px'}}
-      >
-        <SearchIcon />
-      </IconButton>
-
-    </Stack>
+      <Stack direction='row' sx={{
+        marginTop: '30px',
+      }}>
+        <TextField 
+          value={ inputValue }
+          onChange={ onInputChange }
+          id="outlined-basic" 
+          label="GitHub user" 
+          variant="outlined"
+          placeholder='Octocat'
+          size='small'
+          sx={{
+            width: '100%',
+          }}
+        />
+        <IconButton 
+          type='submit'
+          size='small'
+          aria-label='search'
+          sx={{left: '-45px'}}
+        >
+          <SearchIcon />
+        </IconButton>
+      </Stack>
+    </form>
     
   )
 }
