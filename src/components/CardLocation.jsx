@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Grid, Link, Stack, Typography } from '@mui/material';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LanguageIcon from "@mui/icons-material/Language";
-import BusinessIcon from '@mui/icons-material/Business';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { AppContext } from '../context';
 
-export const CardLocation = ({ userState}) => {
+export const CardLocation = () => {
+
+  const { userState } = useContext(AppContext);
 
   const { 
     login: username,
@@ -29,11 +32,12 @@ export const CardLocation = ({ userState}) => {
           xs: 'center'
         }
       }}
-    >
+    >    
+
       <Grid item xs={12} sm={6}>
         <Stack direction='row' spacing={1}>
           <LocationOnIcon />
-          <Typography>{ location ? location : 'Location  unknown' }</Typography>
+          <Typography>{ location ? location : 'Location unknown' }</Typography>
         </Stack>
       </Grid>
 

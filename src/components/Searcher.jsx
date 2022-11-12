@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { IconButton, Stack, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { AppContext } from '../context';
 
-export const Searcher = (props) => {
-  const { setInputUser } = props;
+export const Searcher = () => {
+  
+  const { setInputUser } = useContext(AppContext);  
 
   const [inputValue, setInputValue] = useState('');
 

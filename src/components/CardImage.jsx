@@ -1,12 +1,16 @@
-import { CardMedia } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react';
+import { CardMedia } from '@mui/material';
+import { AppContext } from '../context';
 
-export const CardImage = ({ userState }) => {
+export const CardImage = () => {
+
+  const { userState } = useContext(AppContext);
 
   const { 
     name,
     avatar_url,
-  } = userState
+  } = userState;
+ 
 
   return (
     <CardMedia 

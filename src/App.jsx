@@ -1,8 +1,11 @@
-import { MainPage } from './pages/MainPage';
+import { AppProvider } from './context';
+import { MainPage } from './pages';
 
 const App = () => {
   return (
-    <MainPage />
+    <AppProvider>
+      <MainPage />
+    </AppProvider>
   )
 }
 

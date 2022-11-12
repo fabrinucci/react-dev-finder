@@ -1,0 +1,1 @@
+export { getGitHubUser } from './users';

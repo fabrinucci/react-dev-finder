@@ -1,13 +1,16 @@
-import { CardContent, Stack, Typography } from '@mui/material'
-import React from 'react'
+import { useContext } from 'react';
+import { CardContent, Stack, Typography } from '@mui/material';
+import { AppContext } from '../context';
 
-export const CardInfo = ({ userState }) => {
+export const CardInfo = () => {
+
+  const { userState } = useContext(AppContext);
 
   const { 
     name,
     login: username,
     created_at
-  } = userState
+  } = userState;
 
   return (
     <CardContent>

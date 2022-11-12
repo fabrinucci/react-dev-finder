@@ -1,12 +1,16 @@
+import { useContext } from 'react';
 import { Paper, Stack, Typography } from '@mui/material';
+import { AppContext } from '../context';
 
-export const CardStadistics = ({ userState }) => {
+export const CardStadistics = () => {
+
+  const { userState } = useContext(AppContext);
 
   const { 
     public_repos,
     followers,
     following,
-  } = userState
+  } = userState;
 
   return (
     <Paper elevation={3}>

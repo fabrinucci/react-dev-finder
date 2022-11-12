@@ -1,8 +1,12 @@
-import { Stack, Typography } from "@mui/material";
-import { CardLocation } from "./CardLocation";
-import { CardStadistics } from "./CardStadistics";
+import { useContext } from 'react';
+import { Stack, Typography } from '@mui/material';
+import { AppContext } from '../context';
+import { CardLocation } from './CardLocation';
+import { CardStadistics } from './CardStadistics';
 
-export const CardDescription = ({ userState }) => {
+export const CardDescription = () => {
+
+  const { userState } = useContext(AppContext);
   const { bio } = userState;
 
   return (

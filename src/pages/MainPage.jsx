@@ -1,29 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { Container } from '@mui/material';
+import { AppContext } from '../context';
 import { Searcher } from '../components';
-import { getGitHubUser } from '../services/users';
-import { UserCard } from '../containers/UserCard';
+import { UserCard } from '../containers';
 
 
 export const MainPage = () => {
 
-  const [inputUser, setInputUser] = useState('octocat');
-  const [userState, setUserState] = useState(inputUser);
-
-  const getDataUser = async (user) => {
-    const userResponse = await getGitHubUser(user);
-
-    if( userState === 'octocat' ) {
-      localStorage.setItem('octocat', JSON.stringify(userResponse));
-    }
-
-    if(userResponse.message === 'Not Found') {
-      const octocat = JSON.parse(localStorage.getItem('octocat'));
-      setUserState(octocat)
-    } else {
-      setUserState(userResponse)
-    }
-  }
+  const { inputUser, getDataUser } = useContext(AppContext);
   
   useEffect(() => {
     getDataUser(inputUser);
@@ -40,8 +24,8 @@ export const MainPage = () => {
       justifyContent: 'center'
     }}>
       <>
-        <Searcher setInputUser={setInputUser}/>
-        <UserCard userState={userState}/>
+        <Searcher />
+        <UserCard />
       </>
     </Container>
   )
