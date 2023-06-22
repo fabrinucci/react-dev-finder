@@ -4,6 +4,26 @@
   padding: 0;
 }
 
-body {
-  background-color: #ebe9a6;
+:root {
+  --text-primary: #d5c2e9;
+  --text-secondary: #9e6cd3;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--text-primary);
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--text-primary) !important;
+}
+
+#outlined-basic-label {
+  color: var(--text-primary) !important;
+}
+#outlined-basic {
+  color: var(--text-primary) !important;
 }
