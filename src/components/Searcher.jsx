@@ -22,6 +22,7 @@ export const Searcher = () => {
     <form
       onSubmit={handleSubmit}
       style={{
+        position: "relative",
         width: "80%",
       }}
     >
@@ -49,7 +50,15 @@ export const Searcher = () => {
           size="small"
           aria-label="search"
           color="primary"
-          sx={{ left: "-45px" }}
+          sx={{
+            position: "absolute",
+            top: "34px",
+            right: {
+              xs: "0",
+              md: "5px",
+            },
+            // right: "0",
+          }}
         >
           <SearchIcon />
         </IconButton>
