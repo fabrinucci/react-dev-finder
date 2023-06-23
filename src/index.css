@@ -17,17 +17,12 @@ p {
   color: var(--text-primary);
 }
 
-body {
-  position: "relative";
-  background-color: rgba(56, 17, 94, 0.841);
-}
-
 main {
-  background-color: rgba(56, 17, 94, 0.841);
+  background-color: rgba(44, 13, 74, 0.87);
   min-height: 100vh;
 }
 
-body::after {
+main::after {
   content: "";
   position: fixed;
   top: 0;
