@@ -23,8 +23,6 @@ export const CardLocation = () => {
     return page;
   };
 
-  // console.log(webPage);
-
   return (
     <Grid
       container

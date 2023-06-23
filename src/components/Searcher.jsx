@@ -36,7 +36,7 @@ export const Searcher = () => {
           value={inputValue}
           onChange={onInputChange}
           id="outlined-basic"
-          label="GitHub user"
+          label="Search a user"
           variant="outlined"
           autoComplete="off"
           placeholder="Octocat"
@@ -57,7 +57,6 @@ export const Searcher = () => {
               xs: "0",
               md: "5px",
             },
-            // right: "0",
           }}
         >
           <SearchIcon />

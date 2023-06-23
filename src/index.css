@@ -13,16 +13,21 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p {
   color: var(--text-primary);
 }
 
-main {
+.background {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   background-color: rgba(44, 13, 74, 0.87);
   min-height: 100vh;
 }
 
-main::after {
+.background::after {
   content: "";
   position: fixed;
   top: 0;
@@ -34,6 +39,17 @@ main::after {
   background-size: cover;
   opacity: 0.5;
   z-index: -1;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(113, 34, 193, 0.4);
+  padding: 20px;
+  width: 100%;
 }
 
 .MuiOutlinedInput-notchedOutline {

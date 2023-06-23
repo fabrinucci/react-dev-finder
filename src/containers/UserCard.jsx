@@ -7,7 +7,7 @@ export const UserCard = () => {
       container
       spacing={1}
       sx={{
-        margin: "30px 0",
+        marginTop: "30px",
         backgroundColor: "rgba(113, 34, 193, 0.4)",
         borderRadius: "10px",
       }}
