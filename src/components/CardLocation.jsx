@@ -31,22 +31,23 @@ export const CardLocation = () => {
       sx={{
         flexDirection: {
           xs: "column",
-          sm: "row",
+          md: "row",
         },
         alignItems: {
           xs: "center",
+          sm: "start",
         },
       }}
     >
-      <Grid item xs={12} sm={6}>
-        <Stack direction="row" spacing={1}>
+      <Grid item xs={12} md={6}>
+        <Stack direction="row" alignItems="center" spacing={1}>
           <LocationOnIcon color="primary" />
           <Typography>{location ? location : "Unknown"}</Typography>
         </Stack>
       </Grid>
 
       <Grid item xs={12} sm={6}>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" alignItems="center" spacing={1}>
           <GitHubIcon color="primary" />
           <Link
             href={github_profile}
@@ -61,7 +62,7 @@ export const CardLocation = () => {
 
       {blog && (
         <Grid item xs={12} sm={6}>
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" alignItems="center" spacing={1}>
             <LanguageIcon color="primary" />
             <Link
               href={webPage(blog)}
@@ -76,7 +77,7 @@ export const CardLocation = () => {
       )}
       {twitter && (
         <Grid item xs={12} sm={6}>
-          <Stack direction="row" spacing={1}>
+          <Stack direction="row" alignItems="center" spacing={1}>
             <TwitterIcon color="primary" />
             <Link
               href={`https://twitter.com/${twitter}`}

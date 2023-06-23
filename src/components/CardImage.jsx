@@ -1,10 +1,9 @@
 import { useContext } from "react";
-import { CardMedia } from "@mui/material";
+import { CardMedia, Container } from "@mui/material";
 import { AppContext } from "../context";
 
 export const CardImage = () => {
-  const { userState } = useContext(AppContext);
-
+  const { userState, loading } = useContext(AppContext);
   const { name, avatar_url } = userState;
 
   return (

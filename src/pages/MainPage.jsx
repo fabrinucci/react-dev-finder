@@ -3,9 +3,10 @@ import { Container, Link, Typography } from "@mui/material";
 import { AppContext } from "../context";
 import { Searcher } from "../components";
 import { UserCard } from "../containers";
+import { Loading } from "../components/Loading";
 
 export const MainPage = () => {
-  const { inputUser, getDataUser } = useContext(AppContext);
+  const { inputUser, getDataUser, loading } = useContext(AppContext);
 
   useEffect(() => {
     getDataUser(inputUser);
@@ -23,7 +24,7 @@ export const MainPage = () => {
           }}
         >
           <Searcher />
-          <UserCard />
+          {loading ? <Loading /> : <UserCard />}
         </Container>
       </main>
       <footer>
