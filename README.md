@@ -1,3 +1,5 @@
+![Dev finder](https://github.com/fabrinucci/react-dev-finder/blob/main/public/home.webp)
+
 <h1 align="center">Welcome to Dev Finder 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
@@ -21,18 +23,20 @@ npm install
 
 ## Technologies
 
-- [Vite](https://vitejs.dev/)
-- [React](https://react.dev/)
+[![ReactJS](https://img.shields.io/static/v1?label=&message=reactjs&color=149ECA&logo=react&logoColor=white&style=for-the-badge)](https://react.dev/)
+[![ViteJS](https://img.shields.io/static/v1?label=&message=vitejs&color=646CFF&logo=vite&logoColor=white&style=for-the-badge)](https://vitejs.dev/)
+[![MaterialUI](https://img.shields.io/static/v1?label=&message=materialui&color=007FFF&logo=mui&logoColor=white&style=for-the-badge)](https://mui.com/)
+
 - [MaterialUI](https://mui.com/)
 
 ## Author
 
 👤 **Fabrizio Nucci**
 
-- Website: https://fabrinucci.github.io
-- Github: [@fabrinucci](https://github.com/fabrinucci)
-- Twitter: [@FabrizioDev](https://twitter.com/FabrizioDev)
-- LinkedIn: [@fabrinucci](https://linkedin.com/in/fabrinucci)
+[![Website](https://img.shields.io/static/v1?label=&message=website&color=CCCCF1&style=for-the-badge)](https://fabrinucci.github.io)
+[![GitHub](https://img.shields.io/static/v1?label=&message=github&color=181717&logo=github&logoColor=white&style=for-the-badge)](https://github.com/fabrinucci)
+[![LinkedIn](https://img.shields.io/static/v1?label=&message=linkedin&color=0A66C2&logo=linkedin&logoColor=white&style=for-the-badge)](https://linkedin.com/in/fabrinucci)
+[![Twitter](https://img.shields.io/static/v1?label=&message=twitter&color=1D9BF0&logo=twitter&logoColor=white&style=for-the-badge)](https://twitter.com/FabrizioDev)
 
 ## Show your support
 
