@@ -27,8 +27,6 @@ npm install
 [![ViteJS](https://img.shields.io/static/v1?label=&message=vitejs&color=646CFF&logo=vite&logoColor=white&style=for-the-badge)](https://vitejs.dev/)
 [![MaterialUI](https://img.shields.io/static/v1?label=&message=materialui&color=007FFF&logo=mui&logoColor=white&style=for-the-badge)](https://mui.com/)
 
-- [MaterialUI](https://mui.com/)
-
 ## Author
 
 👤 **Fabrizio Nucci**
